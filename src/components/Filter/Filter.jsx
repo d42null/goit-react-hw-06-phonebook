@@ -1,13 +1,22 @@
-import PropTypes from 'prop-types';
 import { Label } from 'components/ContactForm/ContactForm.styled';
-
-export const Filter = ({ value, onChange }) => (
-  <Label>
-    Find contacts by name
-    <input type="text" value={value} onChange={onChange} />
-  </Label>
-);
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+import { useDispatch } from 'react-redux';
+import { setFilter } from '../../redux/store';
+export const Filter = () => {
+  // const filter = useSelector(getFilter);
+  const dispatch = useDispatch();
+  const onFilterChange = e => {
+    console.log(e.target.value);
+    dispatch(setFilter(e.target.value.toLowerCase()));
+  };
+  return (
+    <Label>
+      Find contacts by name
+      <input
+        name="filter"
+        // value={filter}
+        type="text"
+        onChange={onFilterChange}
+      />
+    </Label>
+  );
 };
