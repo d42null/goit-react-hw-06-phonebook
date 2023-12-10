@@ -36,7 +36,8 @@ const contactsSlice = createSlice({
     },
     deleteContact: (state, action) => {
       state.contacts.splice(
-        state.contacts.findIndex(contact => contact.id === action.payload)
+        state.contacts.findIndex(contact => contact.id === action.payload),
+        1
       );
     },
   },
