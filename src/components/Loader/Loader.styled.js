@@ -22,7 +22,7 @@ export const Ldr = styled.div`
   }
   & div:nth-child(3) {
     left: 56px;
-    animation-delay: 0;
+    animation-delay: 0s;
   }
   @keyframes lds-facebook {
     0% {

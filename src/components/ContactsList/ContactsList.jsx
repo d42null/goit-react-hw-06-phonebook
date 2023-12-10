@@ -2,7 +2,6 @@ import { Contact } from 'components/Contact/Contact';
 import { useSelector } from 'react-redux';
 import { getContacts, getFilter } from '../../redux/store';
 const getVisibleContacts = (contactsFilter, contacts) => {
-  console.log(contacts, contactsFilter);
   return contactsFilter
     ? contacts.filter(
         c =>
