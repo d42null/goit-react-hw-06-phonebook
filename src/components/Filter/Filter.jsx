@@ -1,6 +1,6 @@
 import { Label } from 'components/ContactForm/ContactForm.styled';
 import { useDispatch } from 'react-redux';
-import { setFilter } from '../../redux/phonebookSlice';
+import { setFilter } from '../../redux/filterSlice';
 export const Filter = () => {
   const dispatch = useDispatch();
   const onFilterChange = e => {

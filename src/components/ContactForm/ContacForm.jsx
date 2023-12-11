@@ -1,6 +1,6 @@
 import { Button, FormContainer, Label } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/phonebookSlice';
+import { addContact } from '../../redux/contactsSlice';
 import { getContacts } from '../../redux/selectors';
 export const ContactForm = () => {
   const contacts = useSelector(getContacts);
